@@ -3,6 +3,9 @@
 @theme {
     /* --property-number: - "number" represents the pixels ex. --text-128: -> 128 pixels*/
 
+    /* FONTS */
+    --font-sans: var(--font-roboto);
+
     /* COLORS */
     
     
