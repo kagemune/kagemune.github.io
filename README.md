@@ -1,31 +1,23 @@
-# Astro Starter Kit: Minimal
+#  Astro Portfolio Themes Starter Kit
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A base template for creating portfolio Astro themes already set up with content collections for projects and blog, tailwind, components and PagesCMS integration.  
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+This base template comes already set up with:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Content collections for Projects and Blog
+- Components for elements such as Text, Heading, Link, etc
+- Global components such as Header, Footer, and Navigation
+- Pages created for Home, About, Contact
+- Tailwind theme setup
+- Fonts API
+- SEO setup
+- PagesCMS integration
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+With this, all that's left to do is implement the design of the website with the desired styles, components and content!
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
+## 🧞 Astro Commands
 
 All commands are run from the root of the project, from a terminal:
 
