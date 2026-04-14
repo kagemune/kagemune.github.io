@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@theme {
+    /* --property-number: - "number" represents the pixels ex. --text-128: -> 128 pixels*/
+
+    /* COLORS */
+    
+    
+    /* TEXT SIZES */
+    --text-216: 13.5rem;
+    --text-128: 8rem;
+    --text-96: 6rem;
+    --text-80: 5rem;
+    --text-64: 4rem;
+    --text-48: 3rem;
+    --text-40: 2.5rem;
+    --text-32: 2rem;
+    --text-24: 1.5rem;
+    --text-20: 1.25rem;
+    --text-16: 1rem;
+    --text-12: 0.75rem;
+
+     /* SPACING */
+    --spacing-224: 14rem;
+    --spacing-144: 9rem;
+    --spacing-128: 8rem;
+    --spacing-104: 6.5rem;
+    --spacing-96: 6rem;
+    --spacing-88: 5.5rem;
+    --spacing-80: 5rem;
+    --spacing-72: 4.5rem;
+    --spacing-64: 4rem;
+    --spacing-56: 3.5rem;
+    --spacing-48: 3rem;
+    --spacing-40: 2.5rem;
+    --spacing-32: 2rem;
+    --spacing-24: 1.5rem;
+    --spacing-16: 1rem;
+    --spacing-8: 0.5rem;
+    --spacing-4: 0.25rem;
+
+    /* BREAKPOINTS */
+    --breakpoint-xsm: 320px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1200px;
+    --breakpoint-xl: 1440px;
+}
