@@ -1,0 +1,23 @@
+---
+// components
+import Link from "../elements/Link.astro";
+
+// props
+type Props = {
+    prev?: string;
+    next?: string;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{
+    prev && (
+        <Link variant={'button'} href={prev} text="Previous"/>
+    )
+}
+{
+    next && (
+        <Link variant={'button'} href={next} text="Next"/>
+    )
+}    

@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+// props
+interface Props extends HTMLAttributes<"p">{
+    variant?: "sm" | "normal" | "lg" | "xl"
+}
+
+const { variant = "normal", class: className, ...rest } = Astro.props;
+
+// common styling for all variants
+const baseStyle = "";
+
+// styling for each variant
+const variantStyles = {
+    sm: "",
+    normal: "",
+    lg: "",
+    xl: ""
+}
+---
+
+<p class:list={[baseStyle, variantStyles[variant], className]}{...rest}><slot /></p>

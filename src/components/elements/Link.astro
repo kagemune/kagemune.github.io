@@ -1,0 +1,34 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+// props
+interface Props extends HTMLAttributes<"a"> {
+    href: string,
+    variant: "button" | "nav" | "inline",
+    text: string,
+    newWindow?: boolean
+}
+
+const { href, variant, text, newWindow = false, class: className, ...rest } = Astro.props;
+
+// common styling for all variants
+const baseStyle = "";
+
+// styling for each variant
+const variantStyle = {
+    button: "",
+    nav: "",
+    inline: ""
+}
+---
+
+<a 
+    href={href} 
+    class:list={[baseStyle, variantStyle[variant], className]}
+    target={newWindow ? "_blank" : undefined}
+    rel={newWindow ? "noopener noreferrer" : undefined}
+    aria-label={newWindow ? `${Astro.slots.has('default') ? '' : href} (opens in new window)` : undefined} 
+    {...rest}
+>
+    {text}
+</a>
