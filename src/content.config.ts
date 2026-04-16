@@ -8,11 +8,13 @@ const projects = defineCollection({
         id: z.number(),
         title: z.string().max(50),
         slug: z.string(),
-        client: z.string().max(50),
-        category: z.enum(["Placeholder 1", "Placeholder 2"]), // change and add project categories here
+        category: z.preprocess(
+                    (val) => (Array.isArray(val) ? val : [val]),
+                    z.array(z.enum(["Placeholder 1", "Placeholder 2"]))),
         year: z.string().max(4),
-        featuredImage: image(),
-        liveSite: z.url(),
+        featuredImage: image().optional(),
+        liveSite: z.url().optional(),
+        github: z.url().optional(),
         description: z.string().max(350),
         isFeatured: z.boolean(),
         isDraft: z.boolean()

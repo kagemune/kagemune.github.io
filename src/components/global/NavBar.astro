@@ -1,0 +1,25 @@
+---
+// components
+import Link from "../elements/Link.astro"
+
+// content
+const nav = [
+    { title: "/home", href: "/" },
+    { title: "/projects", href: "/projects" },
+    { title: "/about", href: "/about" },
+    { title: "/writing", href: "/blog" },
+    { title: "/contact", href: "/contact" },
+]
+---
+
+<nav class="bg-base-900 flex flex-row flex-wrap">
+    {
+        nav.map((navLink) => (
+            <Link
+                variant={'nav'} 
+                href={navLink.href}
+                text={navLink.title}
+            />
+        ))
+    }
+</nav>

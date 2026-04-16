@@ -17,6 +17,7 @@ content:
         label: Category
         type: select
         options:
+          multiple: true
           values:
             - Placeholder 1
             - Placeholder 2

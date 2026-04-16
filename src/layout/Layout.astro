@@ -4,63 +4,32 @@ import "../styles/global.css";
 import { Font } from "astro:assets";
 
 // components
-import Seo, { type Props as SEOProps } from "./../components/global/Seo.astro";
+import Wrapper from "../components/global/Wrapper.astro";
+import BaseHead from "../components/global/BaseHead.astro";
+import Header from "../components/global/Header.astro";
 import Footer from "../components/global/Footer.astro";
 
-// Site-wide defaults (edit these once for your whole site) 
-const SITE_NAME    = "Title";
-const TITLE_TMPL   = "%s | Title";
-const DEFAULT_OG   = "/images/og-default.png";   // place in /public/images/
-const TWITTER_SITE = "@handle";
-const THEME_COLOR  = "#ffffff";
-const LOCALE       = "en_US";
-
-// Layout accepts all SEO props + standard layout props
-export interface Props extends SEOProps {
-  /** Extra <head> content injected after SEO tags (optional). */
-  headSlot?: boolean;
-}
-
-const {
-  // Required SEO props (pages must supply these two)
-  title,
-  description,
-  // SEO props with site-wide fallbacks
-  titleTemplate  = TITLE_TMPL,
-  siteName       = SITE_NAME,
-  ogImage        = DEFAULT_OG,
-  twitterSite    = TWITTER_SITE,
-  themeColor     = THEME_COLOR,
-  locale         = LOCALE,
-  // Pass all remaining SEO props through unchanged
-  ...seoProps
-} = Astro.props;
+const {title, description, titleTemplate, siteName, ogImage, twitterSite, themeColor, locale, ...seoProps} = Astro.props;
 ---
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<Font cssVariable="--font-roboto" />
-		<meta name="generator" content={Astro.generator} />
-		<Seo
-    	  title={title}
-    	  description={description}
-    	  titleTemplate={titleTemplate}
-    	  siteName={siteName}
-    	  ogImage={ogImage}
-    	  twitterSite={twitterSite}
-    	  themeColor={themeColor}
-    	  locale={locale}
-    	  {...seoProps}
-    	/>
-	</head>
-	<body>
-		<main>
-            <h1>Astro Portfolio Starter Kit</h1>
-        </main>
-        <Footer />
+	<BaseHead 
+		title={title}
+      	description={description}
+    	titleTemplate={titleTemplate}
+      	siteName={siteName}
+      	ogImage={ogImage}
+      	twitterSite={twitterSite}
+      	themeColor={themeColor}
+      	locale={locale}
+      	{...seoProps}
+	/>
+	<body class="bg-base-950">
+		<Wrapper>
+			<Header />
+			<main class="px-32 py-56 flex flex-col gap-56">
+            	<slot />
+        	</main>
+        	<Footer />
+		</Wrapper>
 	</body>
 </html>

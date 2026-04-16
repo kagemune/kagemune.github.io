@@ -5,18 +5,27 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  fonts: [{ 
-    provider: fontProviders.fontsource(),
-    name: "Roboto",
-    cssVariable: "--font-roboto",
-    fallbacks: ["sans-serif"],
-    weights: [400, 500, 600, 700, 800, 900],
-    styles: ["normal", "italic"],
-  }],
+  fonts: [
+    { 
+      provider: fontProviders.fontsource(),
+      name: "VT323",
+      cssVariable: "--font-pixels",
+      fallbacks: ["monospace"],
+      styles: ["normal", "italic"],
+    },
+    { 
+      provider: fontProviders.fontsource(),
+      name: "JetBrains Mono",
+      cssVariable: "--font-mono",
+      fallbacks: ["monospace"],
+      weights: [400, 500, 600, 700, 800],
+      styles: ["normal", "italic"],
+    }
+  ],
 
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://jessgaspar.dev", // change to your domain
+  site: "https://decker-theme.pages.dev", // change to your domain
   integrations: [sitemap()]
 });
