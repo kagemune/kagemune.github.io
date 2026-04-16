@@ -11,14 +11,21 @@ content:
     fields:
       - { name: id, label: ID, type: number }
       - { name: title, label: Title, type: string, maxlength: 50 }
-      - name: category
-        label: Category
+      - name: tools
+        label: Tools
         type: select
         options:
           multiple: true
           values:
-            - Placeholder 1
-            - Placeholder 2
+            - HTML
+            - JavaScript
+            - TypeScript
+            - LIVE
+            - Docker
+            - React Native
+            - Backend API
+            - Node.js
+            - Tailwind
       - { name: year, label: Year, type: string, maxlength: 4 }
       - { name: github, label: GitHub URL, type: string }
       - { name: liveSite, label: Live Site URL, type: string }
