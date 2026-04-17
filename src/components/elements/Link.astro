@@ -11,20 +11,17 @@ interface Props extends HTMLAttributes<"a"> {
 
 const { href, variant, text, newWindow = false, class: className, ...rest } = Astro.props;
 
-// common styling for all variants
-const baseStyle = "";
-
 // styling for each variant
 const variantStyle = {
     button: "",
-    nav: "px-24 py-16 bg-base-900 hover:bg-base-800 text-base-100 hover:text-base-400 border-r-base-900 border-top-base-900 font-pixels text-20/5",
-    inline: "font-mono text-base-100 hover:text-base-300 font-semibold underline"
+    nav: "px-24 py-16 bg-base-900 hover:bg-base-950 border-t-2 hover:border-t-base-900 text-base-100 hover:text-base-400 border-t-base-900 border-t-base-900 font-pixels text-20/5",
+    inline: "font-pixels text-20 text-base-100 hover:text-base-300 font-semibold underline"
 }
 ---
 
 <a 
     href={href} 
-    class:list={[baseStyle, variantStyle[variant], className]}
+    class:list={[variantStyle[variant], className]}
     target={newWindow ? "_blank" : undefined}
     rel={newWindow ? "noopener noreferrer" : undefined}
     aria-label={newWindow ? `${Astro.slots.has('default') ? '' : href} (opens in new window)` : undefined} 

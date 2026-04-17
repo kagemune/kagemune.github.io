@@ -10,14 +10,16 @@ type Props = {
 
 const { prev, next } = Astro.props;
 ---
-
-{
-    prev && (
-        <Link variant={'button'} href={prev} text="Previous"/>
-    )
-}
-{
-    next && (
-        <Link variant={'button'} href={next} text="Next"/>
-    )
-}    
+<div class="flex flex-row justify-between gap-32 items-center">
+    {
+        prev && (
+            <Link variant={'inline'} href={prev} text="Previous Page"/>
+        )
+    }
+    {
+        next && (
+            <Link variant={'inline'} href={next} text="Next Page"/>
+        )
+    }   
+</div>
+ 

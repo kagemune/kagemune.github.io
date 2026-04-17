@@ -3,12 +3,19 @@
 import Section from "../elements/Section.astro";
 import ArticleCard from "../elements/ArticleCard.astro";
 
+// utils
+import { getReadingTime } from "../../utils/readingTime";
+
 // content collection
 import { getCollection } from "astro:content";
 const blog = await getCollection("blog");
 const recentArticles = blog
   .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
-  .slice(0, 3);
+  .slice(0, 3)
+  .map((article) => ({
+    ...article,
+    readingTime: getReadingTime(article.body ?? "")
+  }));
 ---
 
 <Section 
@@ -20,6 +27,10 @@ const recentArticles = blog
             recentArticles.map((article) => (
                 <ArticleCard
                     title={article.data.title}
+                    publishedDate={article.data.publishedDate}
+                    slug={article.data.slug}
+                    category={article.data.category}
+                    readingTime={article.readingTime}
                 />
             ))
         }

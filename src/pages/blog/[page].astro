@@ -2,6 +2,12 @@
 // layout
 import Layout from "../../layout/Layout.astro"
 
+// utils
+import { formatDate } from "../../utils/formatDate";
+
+// components
+import Section from "../../components/elements/Section.astro";
+
 // routing
 import { type GetStaticPaths } from "astro";
 import { render } from "astro:content";
@@ -21,14 +27,20 @@ export const getStaticPaths = (async () => {
 // props
 const { article } = Astro.props;
 const { Content } = await render(article);
-const { title, category, image, publishedDate } = article.data;
+const { title, category, publishedDate } = article.data;
 ---
 
 <Layout
-    title=""
+    title={title}
     description=""
     ogImage=""
-    canonical="https://jessgaspar.dev/"
-    
 >
+    <Section
+        title=`Published On: ${formatDate(publishedDate)}`
+        titleHeading=`#${category}`
+    >
+    <div class="markdown-content flex flex-col gap-24">
+        <Content />
+    </div>
+    </Section>
 </Layout>

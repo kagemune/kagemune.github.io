@@ -13,8 +13,8 @@ import Tag from "../elements/Tag.astro";
 const { title, year, github, website, description, tools } = Astro.props;
 
 const links = [
-    { icon: Github, text: "Source", link: github },
-    { icon: Website, text: "Website", link: website },
+    { icon: Github, text: "Source", url: github },
+    { icon: Website, text: "Website", url: website },
 ]
 ---
 
@@ -22,7 +22,7 @@ const links = [
     <div class="bg-base-900 p-16 flex flex-col gap-16">
         <Heading tagName="h3" tagSize="h3">{title}</Heading>
         <div class="flex flex-row gap-32">
-            <div class="flex flex-row gap-8 text-base-100">
+            <div class="flex flex-row gap-8 text-base-100 items-center">
                 <Calendar width={20} height={20} fill="currentColor" />
                 <Text variant={'sm'} class="text-base-500">{year}</Text>
             </div>
@@ -30,10 +30,12 @@ const links = [
                 links.map((link) => {
                     const Icon = link.icon;
                     return (
-                        <div class="flex flex-row gap-8 text-base-100">
-                            <Icon width={20} height={20} fill="currentColor" />
-                            <Link variant={'inline'} href={link.link} text={link.text} newWindow />
-                        </div>
+                        link.url && (
+                            <div class="flex flex-row gap-8 text-base-100 items-center">
+                                <Icon width={20} height={20} fill="currentColor" />
+                                <Link variant={'inline'} href={link.url} text={link.text} newWindow />
+                            </div>
+                        )
                     ) 
                 })
             }

@@ -1,13 +1,14 @@
 ---
 // assets
 import "../styles/global.css";
-import { Font } from "astro:assets";
+import "../styles/markdown.css";
 
 // components
 import Wrapper from "../components/global/Wrapper.astro";
 import BaseHead from "../components/global/BaseHead.astro";
 import Header from "../components/global/Header.astro";
 import Footer from "../components/global/Footer.astro";
+import Heading from "../components/elements/Heading.astro";
 
 const {title, description, titleTemplate, siteName, ogImage, twitterSite, themeColor, locale, ...seoProps} = Astro.props;
 ---
@@ -24,9 +25,10 @@ const {title, description, titleTemplate, siteName, ogImage, twitterSite, themeC
       	{...seoProps}
 	/>
 	<body class="bg-base-950">
-		<Wrapper>
+		<Wrapper class="min-h-full">
 			<Header />
 			<main class="px-32 flex flex-col gap-56">
+				<Heading tagName="h1" tagSize="h1">{title}</Heading>
             	<slot />
         	</main>
         	<Footer />

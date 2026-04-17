@@ -1,4 +1,4 @@
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 import { defineCollection } from 'astro/content/config';
 import { z } from 'astro/zod'
 
@@ -26,10 +26,37 @@ const blog = defineCollection({
         slug: z.string().max(50),
         title: z.string().max(50),
         publishedDate: z.date(),
-        category: z.enum(["Placeholder 1", "Placeholder 2"]), // change and add blog categories here
+        category: z.enum(["systems", "ai", "productivity"]), // change and add blog categories here
+        readingTime: z.number().optional(),
         isDraft: z.boolean()
     })
 })
 
+const experience = defineCollection({
+    loader: file("src/content/resume/experience.yaml"),
+    schema: z.object({
+        title: z.string().max(70),
+        timeline: z.string().max(15),
+        description: z.string().max(500)
+    })
+})
 
-export const collections = { projects, blog };
+const education = defineCollection({
+    loader: file("src/content/resume/education.yaml"),
+    schema: z.object({
+        title: z.string().max(70),
+        timeline: z.string().max(15),
+        school: z.string().max(70)
+    })
+})
+
+const skillsAndTools = defineCollection({
+    loader: file("src/content/skills-and-tools/skillsAndTools.yaml"),
+    schema: z.object({
+        title: z.string().max(70),
+        items: z.array(z.string())
+    })
+})
+
+
+export const collections = { projects, blog, experience, education, skillsAndTools };
