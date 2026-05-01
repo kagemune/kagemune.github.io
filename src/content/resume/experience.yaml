@@ -1,19 +1,15 @@
+
 - id: 1
-  title: Software Engineer — Polygon Labs
-  timeline: 2023 — Present
-  description: I work on full-stack systems supporting payments, bridging, and staking infrastructure, with a strong focus on reliability and performance. My work involves improving system confidence through robust testing practices, better observability, and clear internal documentation. I collaborate closely with cross-functional teams to ship features efficiently while maintaining high standards for scalability and developer experience.
+  title: Software Development Trainee — SENA (Agri Sector)
+  timeline: 2025 — 2026
+  description: I developed and automated key processes for a major floriculture enterprise using AppSheet and SQL. My work included designing an end-to-end Crop Management solution for carnation production and an HR Attendance system, significantly streamlining reporting and personnel data management. I focused on requirement analysis and database optimization to ensure high system performance and data integrity
 
 - id: 2
-  title: Backend Engineer — Fintech Startup
-  timeline: 2021 — 2023
-  description: I designed and developed backend services for transaction processing and account systems, helping scale the platform as usage grew. A key part of my role was improving API reliability and reducing latency across critical services. I also introduced structured logging and monitoring practices, which significantly improved debugging and incident response, while working closely with product teams to deliver secure and user-focused features.
+  title: Freelance Web Developer — Self-employed
+  timeline: 2023 — Present
+  description: I build Full-Stack monitoring and control solutions using Flask and React, specializing in real-time sensor data visualization and secure CRUD applications. I manage the entire development lifecycle, from crafting responsive user interfaces with Bootstrap to implementing robust backend APIs and version control with Git My focus is on delivering functional, high-performance web tools tailored to specific client needs
 
 - id: 3
-  title: Full-Stack Developer — Independent / Contract
-  timeline: 2019 — 2021
-  description: I built and deployed custom web applications for a range of clients, primarily in e-commerce and SaaS. My work included developing tailored admin dashboards and internal tools that streamlined business operations. I handled projects end-to-end, from initial requirements through to deployment, with a focus on writing maintainable code, optimizing performance, and delivering responsive user experiences.
-
-- id: 4
-  title: Junior Developer — Digital Agency
-  timeline: 2018 — 2019
-  description: I contributed to the development of client websites and web applications, focusing on implementing UI components and integrating backend APIs. During this time, I gained experience debugging issues, improving performance, and working within a collaborative team environment. This role helped build a strong foundation in practical software development and modern web technologies.
+  title: IT Support & Maintenance Technician — Independent
+  timeline: 2021 — 2024
+  description: I provided comprehensive diagnostic and corrective maintenance for laptops, smartphones, and PCs in fast-paced environments. Beyond hardware repair, I managed local network infrastructure and cabling, ensuring minimal downtime and solving complex technical issues. This role required high adaptability and a strong problem-solving mindset to maintain operational reliability for clients.

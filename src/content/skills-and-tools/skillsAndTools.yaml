@@ -1,19 +1,20 @@
 - id: 1
-  title: Tools
+  title: Stack Tecnológico
   items:
-    - Go
-    - Python
-    - TypeScript
-    - SQL
-    - AWS
-    - Docker
-    - PostgreSQL
+    - Python (Flask / Jinja2)
+    - JavaScript
+    - SQL (PostgreSQL / MySQL)
+    - Linux (Mint / Ubuntu)
+    - Shell Scripting (Bash)
+    - Git / GitHub
+    - AppSheet
 - id: 2
-  title: Skills
+  title: Especialidades y Skills
   items:
-    - Distributed Systems
-    - REST/gRPC APIs
-    - Scalability
-    - Unit/integration/E2E testing
-    - Ethereum, EVM, smart contracts
-    - Code reviews, documentation
+    - Desarrollo Web Full Stack
+    - Arquitectura de Software Minimalista
+    - SEO y Optimización de Rendimiento
+    - Administración de Sistemas Linux
+    - Modelado 3D Técnico (OpenSCAD)
+    - Mantenimiento Técnico y Electrónico
+    - Inglés Técnico (B2)
