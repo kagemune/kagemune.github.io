@@ -4,6 +4,13 @@ import Section from "../../elements/Section.astro";
 import Text from "../../elements/Text.astro";
 import Link from "../../elements/Link.astro";
 import SocialLinks from "../../elements/SocialLinks.astro";
+
+const user = "kagemune";
+const domain = "gmail.com";
+
+// Usamos un template literal (backticks) para mayor claridad
+const emailAddress = `${user}@${domain}`;
+const mailtoLink = `mailto:${emailAddress}`;
 ---
 
 <Section
@@ -12,10 +19,38 @@ import SocialLinks from "../../elements/SocialLinks.astro";
     titleHeading="Let's connect!"
 >
 <div class="flex flex-col gap-16 text-base-400">
-    <Text variant={'normal'}>Want to talk about something I’ve worked on, share an opportunity, or just say hello? I’d love to hear from you.</Text>
-    <Text variant={'normal'}>The fastest way to reach me is by email at <Link variant="inline" href="mailto:kagemune.yd@gmail.com" text="kagemune.yd@gmail.com" />.</Text>
-    <Text variant={'normal'}>You can also find me online or send a message through any of these platforms:</Text>    
+    <Text variant={'normal'}>
+        Want to talk about something I’ve worked on, share an opportunity, or just say hello? I’d love to hear from you.
+    </Text>
+
+    <Text variant={'normal'}>
+        The fastest way to reach me is by email at 
+        <a 
+            id="email-link" 
+            class="text-primary-500 underline" 
+            href="#"
+        >
+            [Cargando correo...]
+        </a>.
+    </Text>
+
+    
+    <Text variant={'normal'}>
+        You can also find me online or send a message through any of these platforms:
+    </Text>    
 </div>
     
     <SocialLinks />
 </Section>
+<script>
+    // Esto se ejecuta solo en el navegador del usuario
+    const u = "kagemune.yd";
+    const d = "gmail.com";
+    const full = `${u}@${d}`;
+    
+    const link = document.getElementById('email-link') as HTMLAnchorElement | null;
+    if (link) {
+        link.href = `mailto:${full}`;
+        link.textContent = full;
+    }
+</script>
