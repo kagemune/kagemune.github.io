@@ -1,25 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-
-/* --property-number: - "number" represents the pixels ex. --text-128: -> 128 pixels*/
-
     /* FONTS */
     --font-pixels: var(--font-pixels);
     --font-mono: var(--font-mono);
 
-    /* COLORS - Modificados a tonos Rojos (Hue: 25.0) */
-    --color-base-50: oklch(0.98 0.01 25.0);
-    --color-base-100: oklch(0.95 0.03 25.0);
-    --color-base-200: oklch(0.90 0.08 25.0);
-    --color-base-300: oklch(0.82 0.15 25.0);
-    --color-base-400: oklch(0.70 0.22 25.0);
-    --color-base-500: oklch(0.58 0.25 25.0);
-    --color-base-600: oklch(0.50 0.23 25.0);
-    --color-base-700: oklch(0.42 0.19 25.0);
-    --color-base-800: oklch(0.35 0.15 25.0);
-    --color-base-900: oklch(0.25 0.10 25.0);
-    --color-base-950: oklch(0.15 0.06 25.0);
+    /* COLORS - Azul Inspirado en la Imagen (Hue: 240.0) */
+    /* Inspirado en los azules de la valla publicitaria y la chaqueta */
+    --color-base-50: oklch(0.98 0.01 240.0);  /* Casi blanco con un toque azul frío */
+    --color-base-100: oklch(0.95 0.03 240.0);   
+    --color-base-200: oklch(0.88 0.07 240.0);   
+    --color-base-300: oklch(0.78 0.12 240.0);  /* Azul suave, similar a la chaqueta */
+    --color-base-400: oklch(0.65 0.18 240.0);   
+    --color-base-500: oklch(0.52 0.22 240.0);  /* Azul vibrante principal */
+    --color-base-600: oklch(0.42 0.19 240.0);  /* Azul más oscuro y profundo */
+    --color-base-700: oklch(0.33 0.15 240.0);  
+    --color-base-800: oklch(0.24 0.11 240.0);  /* Excelente para fondos de texto claro */
+    --color-base-900: oklch(0.17 0.07 240.0);  
+    --color-base-950: oklch(0.11 0.04 240.0);  /* Casi negro-azulado */
 
     /* TEXT SIZES */
     --text-216: 13.5rem;
@@ -55,8 +53,8 @@
     --spacing-8: 0.5rem;
     --spacing-4: 0.25rem;
 
-    /* DROP SHADOW - Ajustada a un tono rojo oscuro para coherencia */
-    --drop-shadow-md: 0 0px 5px oklch(0.35 0.15 25.0); 
+    /* DROP SHADOW - Ajustada a un tono azul oscuro para coherencia */
+    --drop-shadow-md: 0 4px 6px oklch(0.15 0.05 240.0 / 0.3); 
 
     /* BREAKPOINTS */
     --breakpoint-xsm: 320px;
