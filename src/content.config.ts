@@ -6,7 +6,7 @@ const projects = defineCollection({
     loader: glob({pattern: "src/content/projects/**/*.md"}),
     schema: z.object({
         id: z.number(),
-        title: z.string().max(50),
+        title: z.string().max(200),
         tools: z.preprocess(
             (val) => (Array.isArray(val) ? val : [val]),
             z.array(z.enum(["TypeScript", "LIVE", "HTML", "JavaScript", "React Native", "Backend API", "Node.js", "Docker", "Tailwind"]))), // change categories here
@@ -23,10 +23,10 @@ const blog = defineCollection({
     loader: glob({pattern: "src/content/blog/**/*.md"}),
     schema: z.object({
         id: z.number(),
-        slug: z.string().max(50),
-        title: z.string().max(50),
+        slug: z.string().max(200),
+        title: z.string().max(200),
         publishedDate: z.date(),
-        category: z.enum(["systems", "ai", "productivity"]), // change and add blog categories here
+        category: z.enum(["systems", "ai", "Software Architecture", "Full-Stack Development", "Tech Career & Strategy ","Product Design", "Open Source & Linux","Dev Environment"]), // change and add blog categories here
         readingTime: z.number().optional(),
         isDraft: z.boolean()
     })
@@ -35,7 +35,7 @@ const blog = defineCollection({
 const experience = defineCollection({
     loader: file("src/content/resume/experience.yaml"),
     schema: z.object({
-        title: z.string().max(70),
+        title: z.string().max(200),
         timeline: z.string().max(15),
         description: z.string().max(500)
     })
@@ -44,16 +44,16 @@ const experience = defineCollection({
 const education = defineCollection({
     loader: file("src/content/resume/education.yaml"),
     schema: z.object({
-        title: z.string().max(70),
+        title: z.string().max(200),
         timeline: z.string().max(15),
-        school: z.string().max(70)
+        school: z.string().max(200)
     })
 })
 
 const skillsAndTools = defineCollection({
     loader: file("src/content/skills-and-tools/skillsAndTools.yaml"),
     schema: z.object({
-        title: z.string().max(70),
+        title: z.string().max(200),
         items: z.array(z.string())
     })
 })
