@@ -1,20 +1,22 @@
 - id: 1
-  title: Stack Tecnológico
+  title: Tech Stack
   items:
-    - Python (Flask / Jinja2)
-    - JavaScript
-    - SQL (PostgreSQL / MySQL)
-    - Linux (Mint / Ubuntu)
-    - Shell Scripting (Bash)
-    - Git / GitHub
-    - AppSheet
+  - Python (Flask / Jinja2)
+  - JavaScript
+  - SQL (PostgreSQL / MySQL)
+  - Linux (Mint / Ubuntu)
+  - Shell Scripting (Bash)
+  - Git / GitHub
+  - AppSheet
+
+
 - id: 2
-  title: Especialidades y Skills
+  title: Specialties and Skills
   items:
-    - Desarrollo Web Full Stack
-    - Arquitectura de Software Minimalista
-    - SEO y Optimización de Rendimiento
-    - Administración de Sistemas Linux
-    - Modelado 3D Técnico (OpenSCAD)
-    - Mantenimiento Técnico y Electrónico
-    - Inglés Técnico (B2)
+  - Full Stack Web Development
+  - Minimalist Software Architecture
+  - SEO and Performance Optimization
+  - Linux Systems Administration
+  - Technical 3D Modeling (OpenSCAD)
+  - Technical and Electronic Maintenance
+  - Technical English (B2)
