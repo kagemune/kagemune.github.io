@@ -2,6 +2,8 @@
   title: Tech Stack
   items:
   - Python (Flask / Jinja2)
+  - R (ggplot2 / dplyr)
+  - TypeScript (React / Vite)
   - JavaScript
   - SQL (PostgreSQL / MySQL)
   - Linux (Mint / Ubuntu)
