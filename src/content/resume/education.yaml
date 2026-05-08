@@ -1,8 +1,29 @@
+
 - id: 1
-  title: Technologist in Analysis and Development of Information Systems
-  timeline: 2017 — 2019
+  title: Software Programming Technician
+  timeline: 2024 - 2026
   school: SENA (National Training Service)
+
 - id: 2
   title: Foundations of Software Engineering and Backend Development
   timeline: 2019 — Present
   school: Self-directed learning & Specialization in Python/Flask
+
+- id: 3
+  title: Diploma in Web Development
+  timeline: 2021
+  school: Universidad del Norte / MinTic 
+
+
+- id: 4
+  title: Exploratory Data Analysis with Python
+  timeline: 2023
+  school: SENA (National Training Service) 
+
+
+- id: 5
+  title: Audiovisual Post-production and Editing (Photoshop)
+  timeline: 2023
+  school: SENA (National Training Service) 
+
+
